@@ -4,7 +4,7 @@
  Activity: Expression Industry
  */
 
-// How many filet's in one Beef Tenderloin
+// How many filet's in one Beef Tenderloin and there weight for each guest
 
 /*Basic calculator that will determine how many steaks you will get out of a beef tenderloin. It will calculate the total weight of a the beef tenderloin, the weight of the fillets you want and then calculate the waste or trim and return the total amount of steks you will get from the meat.
  */
@@ -49,7 +49,7 @@ fillets = Math.round(fillets); // Rounds to the nearest whole number
 
 var results = "Your Tenderloin can be cut into " +guests+ " Fillets that weight " +fillets+ " ounces each"; // Return the desired results
 
-//alert("You will get " +fillets+ " Fillet Mignon's for your dinner party"); // Return the desired results in an alert
+alert(results); // Return the desired results in an alert
 
 console.log(results); // Return the desired results in console
 
