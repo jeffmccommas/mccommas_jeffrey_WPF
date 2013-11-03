@@ -1,7 +1,7 @@
 // JavaScript
 /* Jeffrey McCommas
- Nov. 2nd 2013
- Activity: Expression Worksheet
+ Nov. 3nd 2013
+ Activity: Expression Whacky
  */
 // Check if the user is ready to play!
 
