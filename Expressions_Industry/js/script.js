@@ -11,7 +11,7 @@
 
 confirm("This is a calculator that will determine how many Fillet Mignon steaks you will get out of your Beef Tenderloin. \n\nWould you like to continue? Press OK to continue"); // Confirm you know what this program is
 
-var tenderloinWeight = prompt("Enter the total weight of the Beef Tenderloin you are going to cut into individual fillets. \n\nExample: If your beef tenderloin is 5 Pounds enter 5"); // Gets the total weight of the meat to serve your party
+var tenderloinWeight = parseFloat(prompt("Enter the total weight of the Beef Tenderloin you are going to cut into individual fillets. \n\nExample: If your beef tenderloin is 5 Pounds enter 5")); // Gets the total weight of the meat to serve your party
 
 console.log("You select " +tenderloinWeight+ " Pounds as your weight"); // data entry prompt
 
@@ -21,7 +21,7 @@ if (!isNaN(tenderloinWeight)) { // Check that the user has entered a valid numbe
     alert("This is not a valid weight. Please enter a valid number.");
 }
 
-var guests = prompt("Enter the number of guests at your dinner who will be eating Fillet Mignin. \n\nExample; If you have 5 guests enter the number 5"); // gets the number of people who will be having a steak
+var guests = parseFloat(prompt("Enter the number of guests at your dinner who will be eating Fillet Mignin. \n\nExample; If you have 5 guests enter the number 5")); // gets the number of people who will be having a steak
 
 console.log("You selected " +guests+ " people who will be eating dinner."); // data entry prompt
 
