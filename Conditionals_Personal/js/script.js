@@ -1,57 +1,69 @@
 // JavaScript
 /* Jeffrey McCommas
- Nov. 2nd 2013
- Activity: Expression Industry
+ Nov. 9th 2013
+ Activity: Assignment: Conditionals Personal
  */
 
-// How many filet's in one Beef Tenderloin and there weight for each guest
+/* Friday Night Movies -  A Friday Night movie planner to determine if you have enough money to go to the movies or not.*/
 
-/*Basic calculator that will determine how many steaks you will get out of a beef tenderloin. It will calculate the total weight of a the beef tenderloin, the weight of the fillets you want and then calculate the waste or trim and return the total amount of steks you will get from the meat.
- */
 
-confirm("This is a calculator that will determine how many Fillet Mignon steaks you will get out of your Beef Tenderloin. \n\nWould you like to continue? Press OK to continue"); // Confirm you know what this program is
+var messageOne = "OOPS!! It looks like you are staying home and watching TV tonight!!";
 
-var tenderloinWeight = parseInt(prompt("Enter the total weight of the Beef Tenderloin you are going to cut into individual fillets. \n\nExample: If your beef tenderloin is 5 Pounds enter 5")); // Gets the total weight of the meat to serve your party
+var messageTwo = "Great News!! You can go to the movies and a dinner tonight!!";
 
-console.log("You select " +tenderloinWeight+ " Pounds as your weight"); // data entry prompt
+var messageThree = "You don\'t have enough money for dinner and a movie. You should go out to a movies!!";
 
-if (!isNaN(tenderloinWeight)) { // Check that the user has entered a valid number, if is not a number, alert user
-    alert("This is a valid weight. You can proceed to next step!! ");
-} else {
-    alert("This is not a valid weight. Please enter a valid number.");
-}
+var messageFour = "We are sorry to see you go. Come back when the day is Friday and have a nice day!!";
 
-var guests = parseInt(prompt("Enter the number of guests at your dinner who will be eating Fillet Mignin. \n\nExample; If you have 5 guests enter the number 5")); // gets the number of people who will be having a steak
+var messageFive = "You can\'t afford both so you should go out to a fine meal!!";
 
-console.log("You selected " +guests+ " people who will be eating dinner."); // data entry prompt
+var friday ="How much money do you have to spend for your Friday Night Date Night?";
 
-if (!isNaN(guests)) { // Check that the user has entered a valid number, if is not a number, alert user
-    alert("This is a valid guest count. You can proceed to next step!! ");
-} else {
-    alert("This is not a valid guest count. Please enter a valid number."); // if else
-}
 
-var weightInOunces = tenderloinWeight * 16; // gets the weight of the beef and multiplies it by 16 which is the number of ounces in a pound
 
-//var tenderloinTrim =  35; // average trim on a tenderloin fillet which is 35%
 
-var trim = weightInOunces * 35 / 100; // Calculates the percentage correctly
 
-var netWeight = weightInOunces - trim; // Total weight after trim
 
-var netPounds = netWeight / 16;
+    if (confirm("This is a " +dayOfWeek+ " Night Date planner to determine \nif you have enough money to go out to the Movies and Dinner, or just a movie.\n\n" +"If you do not have enough money you will have to stay home and watch Television.\n\nIf today is Friday click the confirm button, if today is not Friday click the cancel button.")) {
 
-var fillets = netWeight / guests; // Divide the beef in pounds by the number of guests
+        var dayOfWeek = prompt("If today is Friday click the OK button.", 'Hint: This only works if it is Friday');
 
-console.log("The total weight of the Tenderloin after trim is " +netWeight+ " ounces which is " +netPounds+ " pounds"); // returns the unces and pounds
+        dayOfWeek.toUpperCase();
 
-fillets = Math.round(fillets); // Rounds to the nearest whole number
 
-var results = "Your Tenderloin can be cut into " +guests+ " Fillets that weight " +fillets+ " ounces each"; // Return the desired results
 
-alert(results); // Return the desired results in an alert
+        if (dayOfWeek.toUpperCase() == 'FRIDAY') {
 
-console.log(results); // Return the desired results in console
 
+        var fridayCash = prompt(friday, '');
+
+        if (fridayCash >= 50) {
+
+            alert(messageTwo);
+
+        } else if (fridayCash >= 35) {
+
+            alert(messageFive);
+
+        } else if (fridayCash >= 15) {
+
+            alert(messageThree);
+
+        } else {
+
+            alert(messageOne);
+
+        }
+
+       }
+
+
+
+
+    } else {
+
+    alert(messageFour);
+
+     }
 
 
