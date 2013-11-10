@@ -4,7 +4,7 @@
  Activity: Conditionals Wacky
  */
 
-// Dog, Cat and Bird Fight
+/// Dog, Cat and Bird Fight
 
 
 // confirm popup asking for true/false inout
