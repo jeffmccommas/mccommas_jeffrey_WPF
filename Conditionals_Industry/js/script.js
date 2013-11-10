@@ -1,57 +1,45 @@
 // JavaScript
 /* Jeffrey McCommas
- Nov. 2nd 2013
- Activity: Expression Industry
+ Nov. 9th 2013
+ Activity: Conditional Industry
  */
 
-// How many filet's in one Beef Tenderloin and there weight for each guest
+// Dinner Party Planning Program: How Much Meat to purchase? This program calculates howm much beef or chicken you would need to purchase based on several user inputs that calculate the number of guests attending and the portions size of the meat entree.
 
-/*Basic calculator that will determine how many steaks you will get out of a beef tenderloin. It will calculate the total weight of a the beef tenderloin, the weight of the fillets you want and then calculate the waste or trim and return the total amount of steks you will get from the meat.
- */
+// trim var is the amount of trim we took from the meat. But since we are adding the amount of trim to the total weight needed for the portions we take 100% of the portions needed and add 25% to it, so 100% + 25%
+var trim = 1.25;
 
-confirm("This is a calculator that will determine how many Fillet Mignon steaks you will get out of your Beef Tenderloin. \n\nWould you like to continue? Press OK to continue"); // Confirm you know what this program is
+// Stores our guests prompt choice to this var
+var beef = "beef";
 
-var tenderloinWeight = parseInt(prompt("Enter the total weight of the Beef Tenderloin you are going to cut into individual fillets. \n\nExample: If your beef tenderloin is 5 Pounds enter 5")); // Gets the total weight of the meat to serve your party
+// Stores our guests prompt choice to this var
+var chicken = "chicken";
 
-console.log("You select " +tenderloinWeight+ " Pounds as your weight"); // data entry prompt
+// Gather info on the number of guests
+var guests = parseInt(prompt("Enter here the number of guests you will be having at the party?", ''));
 
-if (!isNaN(tenderloinWeight)) { // Check that the user has entered a valid number, if is not a number, alert user
-    alert("This is a valid weight. You can proceed to next step!! ");
-} else {
-    alert("This is not a valid weight. Please enter a valid number.");
-}
+// Gather info on the number of portions of meat
+var portions = parseInt(prompt("What portion size in ounces.\nExample: 12 ", ''));
 
-var guests = parseInt(prompt("Enter the number of guests at your dinner who will be eating Fillet Mignin. \n\nExample; If you have 5 guests enter the number 5")); // gets the number of people who will be having a steak
+// Select which meat, beef or chicken and then use toLowerCase method to convert string to lower case
+var meatChoice = prompt("Please enter your choice of meat. The selection is either Chicken or Beef.\nExample: If you are having beef for for your dinner, enter the word Beef, if chicken the enter the word chicken", '').toLowerCase();
 
-console.log("You selected " +guests+ " people who will be eating dinner."); // data entry prompt
+// Number of Guests X portions in ounces
+var totalOunces = guests * portions;
 
-if (!isNaN(guests)) { // Check that the user has entered a valid number, if is not a number, alert user
-    alert("This is a valid guest count. You can proceed to next step!! ");
-} else {
-    alert("This is not a valid guest count. Please enter a valid number."); // if else
-}
+// Takes the # of guests X the amount of portions / 16 to get the pounds of meat
+var netWeight = totalOunces / 16;
 
-var weightInOunces = tenderloinWeight * 16; // gets the weight of the beef and multiplies it by 16 which is the number of ounces in a pound
+// Adds the trim to the total weight which is .25
+var totalPounds = netWeight * trim;
 
-//var tenderloinTrim =  35; // average trim on a tenderloin fillet which is 35%
+// Rounds to the nearest whole number
+totalPounds = Math.round(totalPounds);
 
-var trim = weightInOunces * 35 / 100; // Calculates the percentage correctly
+// Using a ternary conditional statement
+(meatChoice === beef) ? console.log("You need " +totalPounds+ " pounds of " +beef+ " and each portion would weight " +portions+ " ounces ") : console.log("You need " +totalPounds+ " pounds of " +chicken+ " and each portion would weight " +portions+ " ounces ");
 
-var netWeight = weightInOunces - trim; // Total weight after trim
 
-var netPounds = netWeight / 16;
-
-var fillets = netWeight / guests; // Divide the beef in pounds by the number of guests
-
-console.log("The total weight of the Tenderloin after trim is " +netWeight+ " ounces which is " +netPounds+ " pounds"); // returns the unces and pounds
-
-fillets = Math.round(fillets); // Rounds to the nearest whole number
-
-var results = "Your Tenderloin can be cut into " +guests+ " Fillets that weight " +fillets+ " ounces each"; // Return the desired results
-
-alert(results); // Return the desired results in an alert
-
-console.log(results); // Return the desired results in console
 
 
 
