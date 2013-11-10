@@ -1,57 +1,50 @@
 // JavaScript
 /* Jeffrey McCommas
- Nov. 2nd 2013
- Activity: Expression Industry
+ Nov. 10th 2013
+ Activity: Conditionals Wacky
  */
 
-// How many filet's in one Beef Tenderloin and there weight for each guest
+// Dog, Cat and Bird Fight
 
-/*Basic calculator that will determine how many steaks you will get out of a beef tenderloin. It will calculate the total weight of a the beef tenderloin, the weight of the fillets you want and then calculate the waste or trim and return the total amount of steks you will get from the meat.
- */
 
-confirm("This is a calculator that will determine how many Fillet Mignon steaks you will get out of your Beef Tenderloin. \n\nWould you like to continue? Press OK to continue"); // Confirm you know what this program is
+// confirm popup asking for true/false inout
+var exitGame = confirm("This is a animal fighting game where you chose either a Dog, a Cat or a Bird to fight. In this case we will play against the machine where the machine gets to pick the opponent.");
 
-var tenderloinWeight = parseInt(prompt("Enter the total weight of the Beef Tenderloin you are going to cut into individual fillets. \n\nExample: If your beef tenderloin is 5 Pounds enter 5")); // Gets the total weight of the meat to serve your party
-
-console.log("You select " +tenderloinWeight+ " Pounds as your weight"); // data entry prompt
-
-if (!isNaN(tenderloinWeight)) { // Check that the user has entered a valid number, if is not a number, alert user
-    alert("This is a valid weight. You can proceed to next step!! ");
-} else {
-    alert("This is not a valid weight. Please enter a valid number.");
+// if/else statement. I started off with this choice to exit tha game but found it wasn't a good idea. I just left it in for now until I figure out a better use for it
+if (exitGame === true || false) {
+    console.log("Sorry, you have to play my game no matter what choice you just made..haha")
 }
 
-var guests = parseInt(prompt("Enter the number of guests at your dinner who will be eating Fillet Mignin. \n\nExample; If you have 5 guests enter the number 5")); // gets the number of people who will be having a steak
+// We start by first asking the user which option they want to pick. and store it in a variable called playerChoice
+var playersChoice = prompt("Which fighter do you wish to chose? The Dog, Cat or Bird").toLowerCase();
 
-console.log("You selected " +guests+ " people who will be eating dinner."); // data entry prompt
+// Now I declare a variable and make it equal to Math.random(), that variable will equal a number between 0 and 1.
+var machineChoice = Math.random();
 
-if (!isNaN(guests)) { // Check that the user has entered a valid number, if is not a number, alert user
-    alert("This is a valid guest count. You can proceed to next step!! ");
-} else {
-    alert("This is not a valid guest count. Please enter a valid number."); // if else
+// If machineChoice is between 0 and 0.33, make machineChoice equal to "dog".
+if (machineChoice < 0.34){
+    machineChoice = "dog";
+
+// If machineChoice is between 0.34 and 0.66, make machineChoice equal to "cat".
+}else if(machineChoice <= 0.67){
+    machineChoice = "cat";
+
+// If machineChoice is between 0.67 and1, make machineChoice equal to "bird".
+}else{
+    machineChoice = "bird";
 }
 
-var weightInOunces = tenderloinWeight * 16; // gets the weight of the beef and multiplies it by 16 which is the number of ounces in a pound
+// store all the results in a variable that gets returned in the console log for either the machine or the player using parameters and arguments
+var results = {
+    'bird': {'cat':   "Excellent, That cat just kicked some booty!",   'dog':    'Bummer Dude, The Dog loses...!'},
+    'dog': {'cat':   'Excellent, That cat just kicked some booty', 'bird': 'Excellent, That Bird just kicked some ass!' },
+    'cat':  {'bird':   'Excellent, That Bird just kicked some ass!', 'dog': 'Bummer Dude, sThe Dog loses...!'}
+};
 
-//var tenderloinTrim =  35; // average trim on a tenderloin fillet which is 35%
+// Print the results
+if(playersChoice === machineChoice){
+    console.log("Looks like the opponents were evenly matched, no one wins so try again");
+}else{
+    console.log(results[playersChoice][machineChoice]);
 
-var trim = weightInOunces * 35 / 100; // Calculates the percentage correctly
-
-var netWeight = weightInOunces - trim; // Total weight after trim
-
-var netPounds = netWeight / 16;
-
-var fillets = netWeight / guests; // Divide the beef in pounds by the number of guests
-
-console.log("The total weight of the Tenderloin after trim is " +netWeight+ " ounces which is " +netPounds+ " pounds"); // returns the unces and pounds
-
-fillets = Math.round(fillets); // Rounds to the nearest whole number
-
-var results = "Your Tenderloin can be cut into " +guests+ " Fillets that weight " +fillets+ " ounces each"; // Return the desired results
-
-alert(results); // Return the desired results in an alert
-
-console.log(results); // Return the desired results in console
-
-
-
+}
