@@ -1,6 +1,6 @@
 // JavaScript
 /* Jeffrey McCommas
- Nov. 10th 2013
+ Nov. 14th 2013
  Activity: Conditionals Worksheet
  */
 
@@ -8,70 +8,74 @@
 /******************** Celsius to Fahrenheit Converter ***************************/
 
 // Collect the number being converted
-//var temp = Number(prompt("Enter the degree in a number you wish to convert"));
+var temp = Number(prompt("Enter the degree in a number you wish to convert"));
 
 // Decide if Fahrenheit or Celsius
-//var unit = prompt("Enter which the degree you want to convert to. If Celsius enter the letter C, if Fahrenheit enter the letter F ").toLowerCase();
+var unit = prompt("Enter which the degree you want to convert to. If Celsius enter the letter C, if Fahrenheit enter the letter F ").toLowerCase();
 
 // Calculation for f to c
-//var degCent = (temp - 32) * 5 / 9;
+var degCent = (temp - 32) * 5 / 9;
 
 // Calculation for c to f
-//var degFahren = 9 / 5 * temp + 32;
+var degFahren = 9 / 5 * temp + 32;
 
 // Run the conditionals here
-//if (unit === "c") {
-//
-//    console.log("The temperature is " + degFahren + " degrees Celsius.")
-//
-//} else {
-//    degCent = Math.round(degCent * 10) / 10; // Rounds to the nearest whole number + 1 decimal
-//
-//    console.log("The temperature is " + degCent + " degrees Celsius.")
-//}
+if (unit === "c") {
+
+    console.log("The temperature is " + degFahren + " degrees Celsius.")
+
+} else {
+    degCent = Math.round(degCent * 10) / 10; // Rounds to the nearest whole number + 1 decimal
+
+    console.log("The temperature is " + degCent + " degrees Celsius.")
+}
 
 
 
 /******************** Group 2: Multiple Results ********************/
 /******************** Check the Login *****************************/
 
-//var newUser = prompt("Enter a UserName for this account. Must be at least 6 characters.", '').toLowerCase();
-//var newPassword = prompt("Enter a password for this account . Must be at least 6 characters", '').toLowerCase();
-//
-//userName = newUser;
-//userPass = newPassword;
-//
-//alert("Congratulations, your account has been created. Click OK to log in to your newly created account");
-//
-//
-//var checkUser = prompt("Enter your username for this account.", '');
-//
-//if (checkUser === userName) {
-//    alert("Welcome, " +userName+ "!");
-//    console.log("Welcome, " +userName+ "!");
-//
-//} else {
-//
-//    alert("User not found. Try again.");
-//    console.log("User not found. Try again.");
-//
-//}
-//var checkPass = prompt("Enter your password for this account.", '');
-//
-//if (checkPass === userPass) {
-//    alert("Success. You have entered the correct password");
-//    console.log("Success. You have entered the correct password");
-//} else {
-//
-//    alert("Password does not match our records.");
-//    console.log("Password does not match our records.");
-//
-//}
-//
-//
-//console.log(userName);
-//
-//console.log(userPass);
+
+// Prompt user to input a user name and password and store that data in a variable
+var newUser = prompt("Enter a UserName for this account. Must be at least 6 characters.", '').toLowerCase();
+var newPassword = prompt("Enter a password for this account . Must be at least 6 characters", '').toLowerCase();
+
+//Store the new user data in new variables
+userName = newUser;
+userPass = newPassword;
+
+alert("Congratulations, your account has been created. Click OK to log in to your newly created account");
+
+// Start the process of logging in and check that the user/password exists
+var checkUser = prompt("Enter your username for this account.", '');
+
+// If the username/password does exists then lets run a loop for additional conditions
+if (checkUser === userName) {
+    alert("Welcome, " +userName+ "!");
+    console.log("Welcome, " +userName+ "!");
+
+} else {
+
+    alert("User not found. Try again.");
+    console.log("User not found. Try again.");
+
+}
+var checkPass = prompt("Enter your password for this account.", '');
+
+if (checkPass === userPass) {
+    alert("Success. You have entered the correct password");
+    console.log("Success. You have entered the correct password");
+} else {
+
+    alert("Password does not match our records.");
+    console.log("Password does not match our records.");
+
+}
+
+
+console.log(userName);
+
+console.log(userPass);
 
 
 
