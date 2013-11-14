@@ -82,30 +82,46 @@ Determine which of the two prices the customer is eligible for.*/
 
 /******************** Movie Ticket Price *****************************/
 
+
+// gross ticket cost
 var ticketCost = 12;
+// variables for results text
 var senior = "Senior Citizen";
 var regular = "Regular ticket price";
 var kids = "Child Under the age of 10";
 var specialTime = "Discount ticket during the early bird hours of 3 and 5 PM";
+// Disount Cost
 var movieDiscount = 7;
 
+// Prompts user to enter there age
 var age = Number(prompt("Welcome to our movies online purchase program.\nTo begin enter your age and click OK." , ''));
 
+// Prompts user to enter the desired movie start time
 var time = Number(prompt("Enter the time of day tou want to see the movie. Movies tart on the hour between 12 and 10 each day and we hve a discount for children under ten and seniors 55 and over between the hours of 3 and 5", ''));
 
-if (age >= 55 || age <= 10) {
-   var newCost =  ticketCost - movieDiscount;
-    confirm("The ticket price is $" +newCost+ " For one " +senior+ " or " +kids+ "");
-    console.log("The ticket price is $" +newCost+ " For one " +senior+ " or " +kids+ "");
 
-} else if (time >= 3 && time <= 5) {
-    var newDiscount = ticketCost - movieDiscount;
-    confirm("The ticket price is $" +newDiscount+ " For one " +specialTime+ "");
-    console.log("The ticket price is $" +newDiscount+ " For one " +specialTime+ "");
+// Sets the conditions that determine the total cost for the movie if the user qualifies for a discount
+switch (age >= 55 || age <= 10)
+{
+    case 1:
+        var newCost =  ticketCost - movieDiscount;
+        confirm("The ticket price is $" +newCost+ " For one " +senior+ " or " +kids+ "");
+        console.log("The ticket price is $" +newCost+ " For one " +senior+ " or " +kids+ "");
+        alert("Thank you for your purchase and enjoy the movie");
+        break;
 
+    case 2:
+        var newDiscount = ticketCost - movieDiscount;
+        confirm("The ticket price is $" +newDiscount+ " For one " +specialTime+ "");
+        console.log("The ticket price is $" +newDiscount+ " For one " +specialTime+ "");
+        alert("Thank you for your purchase and enjoy the movie");
+        break;
 
-} else {
+    // If the user does not qualify for a discount then the default movie cost is applied
 
-    confirm("The ticket price is $" +ticketCost+ " For one " +regular+ "");
-    console.log("The ticket price is $" +ticketCost+ " For one " +regular+ "");
+    default:
+        // Prints the results
+        confirm("The ticket price is $" +ticketCost+ " For one " +regular+ "");
+        console.log("The ticket price is $" +ticketCost+ " For one " +regular+ "");
+        alert("Thank you for your purchase and enjoy the movie");
 }
