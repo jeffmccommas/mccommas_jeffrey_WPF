@@ -1,3 +1,5 @@
-/**
- * Created by sales on 11/16/13.
+// JavaScript
+/* Jeffrey McCommas
+ Nov. 16th 2013
+ Activity: Functions Personal
  */
