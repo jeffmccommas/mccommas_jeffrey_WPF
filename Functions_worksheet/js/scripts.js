@@ -60,7 +60,7 @@ function beeKilled(victimsWeight){
    return killResults;
 }
 
-// Invoke the function
+// Invoke the function and pass the argument
 beeKilled(35);
 
 // Print the results
