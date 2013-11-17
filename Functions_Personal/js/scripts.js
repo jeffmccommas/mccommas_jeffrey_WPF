@@ -18,26 +18,26 @@ for (var i = 0; i < inventory.length; i++ ) {
 console.log("You currently have these items on the inventory list: " + inventory[0] + ", " + inventory[1]+ ", "  +inventory[2]+" and " + inventory[3]+ " ");
 
 /// Par level of inventory
-var eggsInv = 24;
-var milkInv = 2;
-var coffeeInv = 1;
-var butterInv = 2;
+var eggsInv = 24,
+    milkInv = 2,
+    coffeeInv = 1,
+    butterInv = 2;
 
-var eggs = eggsInv;
-var milk = milkInv;
-var butter = butterInv;
-var coffee = coffeeInv;
+var eggs = eggsInv,
+    milk = milkInv,
+    butter = butterInv,
+    coffee = coffeeInv;
 
 // Current level of inventory on Hand
 
-var eggsOnHand = 2;
-var eggPurchase = eggsInv - eggsOnHand;
-var milkOnHand = .3;
-var milkPurchase = milkInv - milkOnHand;
-var butterOnHand = 0;
-var butterPurchase = butterInv - butterOnHand;
-var coffeeOnHand = 0;
-var coffeePurchase = coffeeInv - coffeeOnHand;
+var eggsOnHand = 2,
+    eggPurchase = eggsInv - eggsOnHand,
+    milkOnHand = .3,
+    milkPurchase = milkInv - milkOnHand,
+    butterOnHand = 0,
+    butterPurchase = butterInv - butterOnHand,
+    coffeeOnHand = 0,
+    coffeePurchase = coffeeInv - coffeeOnHand;
 
 // User prompt to inout a iten to be checked against the inventory
 var checklist = prompt("Check how many items you have in inventory: You can check for eggs, milk, butter or coffee", 'eggs');
