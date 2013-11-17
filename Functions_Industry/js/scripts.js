@@ -10,11 +10,11 @@
 
 /// Givens containing the unit values
 
-var tbsp = .5;
-var cup = 8;
-var pint = 16;
-var quart = 32;
-var final = final;
+var tbsp = .5,
+    cup = 8,
+    pint = 16,
+    quart = 32,
+    final = final;
 
 // Function that converts the users input
 function converter(){
@@ -30,7 +30,7 @@ function converter(){
 
     }
 
-    return final;
+    return final; //returns results to print
 }
 
 // User confirmation popup to give us a true or false value
