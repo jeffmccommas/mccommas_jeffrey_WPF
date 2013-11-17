@@ -48,19 +48,20 @@ console.log(resultString);
 var beeStings = 8.666666667;
 var resultsText = "";
 var killResults;
+victimsWeight = "";
 
 // User Prompt
-var victimsWeight = (parseInt(prompt("Enter the weight in pounds of the animal to calculate the bee stings it would take to kill it", '')));
+//var victimsWeight = (parseInt(prompt("Enter the weight in pounds of the animal to calculate the bee stings it would take to kill it", '')));
 
 // Function to do the math and round out the number usr Math.round
-function beeKilled(){
+function beeKilled(victimsWeight){
    killResults = victimsWeight * beeStings;
    resultsText = Math.round(killResults);
    return killResults;
 }
 
 // Invoke the function
-beeKilled();
+beeKilled(35);
 
 // Print the results
 console.log("It takes " + resultsText + " bee stings to kill this animal");
