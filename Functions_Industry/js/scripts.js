@@ -45,7 +45,7 @@ if (answer === true) {
 // Invoke the function
  converter();
 
-   var results = (ounces + " Ounce(s) is equivalent to " + final + " " + units + "(s)")
+   var results = (ounces + " Ounce(s) is equivalent to " + final + " " + units + "(s)");
 
 // Is user answer to the confirmation is false then we will do this step
 } else {
