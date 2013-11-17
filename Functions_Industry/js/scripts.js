@@ -38,7 +38,7 @@ var answer = confirm("This is a simple Javascript program that will help you con
 
 // If user confirmation == true then do this next step
 if (answer === true) {
-    var ounces = (parseFloat(prompt("Enter the amount of ounces you wish to convert. Example 64" ,64)));
+    var ounces = (parseFloat(prompt("Enter the amount of ounces you wish to convert. Example 64" , '64')));
 
     var units = prompt("Enter the unit you want to convert the ounces to.\n\nChoices are quart, pint, cup or tbsp", '');
 
