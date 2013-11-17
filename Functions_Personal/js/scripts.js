@@ -48,30 +48,36 @@ var checklist = prompt("Check how many items you have in inventory: You can chec
 
     if (checklist === "eggs" &&  eggsOnHand >= eggsInv) {
       alert("you have " +eggsInv+ " eggs in stock and you do not need to purchase any more at this time");
+      console.log("you have " +eggsInv+ " eggs in stock and you do not need to purchase any more at this time");
 
     } else if (checklist === "eggs" &&  eggsOnHand <= eggsInv) {
 
         alert("You currently have only " +eggsOnHand+ " on hand and need to purchase " +eggPurchase+ " additional eggs");
+        console.log("You currently have only " +eggsOnHand+ " on hand and need to purchase " +eggPurchase+ " additional eggs");
     }
 
   // start the check for milk and increase the inv if needed
     else if (checklist === "milk" &&  milkOnHand >= milkInv) {
 
         alert("you have " +milkInv+ " gallons of milk in stock and you do not need to purchase any more at this time");
+        console.log("you have " +milkInv+ " gallons of milk in stock and you do not need to purchase any more at this time");
 
     } else if (checklist === "milk" &&  milkOnHand <= milkInv) {
 
         alert("You currently have only " +milkOnHand+ " gallons of milk on hand and need to purchase " +milkPurchase+ " additional gallons");
+        console.log("You currently have only " +milkOnHand+ " gallons of milk on hand and need to purchase " +milkPurchase+ " additional gallons");
 
     }
   // start the check for butter and increase the inv if needed
     else if (checklist === "butter" &&  butterOnHand >= butterInv) {
 
         alert("you have " +butterInv+ " pounds of butter in stock and you do not need to purchase any more at this time");
+        console.log("you have " +butterInv+ " pounds of butter in stock and you do not need to purchase any more at this time");
 
     } else if (checklist === "butter" &&  butterOnHand <= butterInv) {
 
         alert("You currently have only " +butterOnHand+ " pounds of butter on hand and need to purchase " +butterPurchase+ " additional pounds");
+        console.log("You currently have only " +butterOnHand+ " pounds of butter on hand and need to purchase " +butterPurchase+ " additional pounds");
 
     }
 
@@ -79,10 +85,12 @@ var checklist = prompt("Check how many items you have in inventory: You can chec
     else if (checklist === "coffee" &&  coffeeOnHand >= coffeeInv) {
 
         alert("you have " +coffeeInv+ " pounds of coffee in stock and you do not need to purchase any more at this time");
+        console.log("you have " +coffeeInv+ " pounds of coffee in stock and you do not need to purchase any more at this time");
 
     } else if (checklist === "coffee" &&  coffeeOnHand <= coffeeInv) {
 
         alert("You currently have only " +coffeeOnHand+ " pounds of coffee on hand and need to purchase " +coffeePurchase+ " additional pounds");
+        console.log("You currently have only " +coffeeOnHand+ " pounds of coffee on hand and need to purchase " +coffeePurchase+ " additional pounds");
 
     }
 
