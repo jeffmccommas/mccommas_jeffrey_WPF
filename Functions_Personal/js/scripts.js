@@ -9,13 +9,11 @@
 /***** This simple program allows you to keep track of how many food items you have and calculate if you need to purchase more **********/
 
 // Array of groceries with a for loop
-var inventory = ["eggs", "milk", "coffee", "butter"];
-
-for (var i = 0; i < inventory.length; i++ ) {
-}
+var inventory = ["eggs,", "milk,", "coffee,", "butter,"];
 
 // Lets the user know what inventory items are being tracked
-console.log("You currently have these items on the inventory list: " + inventory[0] + ", " + inventory[1]+ ", "  +inventory[2]+" and " + inventory[3]+ " ");
+var myShoppingList = inventory.join(' ');
+console.log("You currently have these items on the inventory list: " + myShoppingList + " ");
 
 /// Par level of inventory
 var eggsInv = 24,
